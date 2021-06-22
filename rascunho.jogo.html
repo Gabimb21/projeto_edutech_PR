@@ -1,0 +1,201 @@
+<canvas width="800" height="800"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    
+	pincel.fillStyle = 'pink';
+    pincel.fillRect(0, 0, 600, 650);
+    pincel.fillStroke = 'black';
+    pincel.strokeRect(0, 0, 600, 650);
+		
+	pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(390, 350, 20, 0, 2 * 3.14);
+    pincel.fill();
+  
+  	pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(210, 350, 20, 0, 2 * 3.14);
+    pincel.fill();
+  
+	pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(300, 350, 100, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'beige';
+    pincel.beginPath();
+    pincel.arc(270, 340, 20, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'beige';
+    pincel.beginPath();
+    pincel.arc(330, 340, 20, 0, 2 * 3.14);
+	pincel.fill();
+	
+    pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(270, 340, 10, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(330, 340, 10, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.arc(270, 340, 5, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.arc(330, 340, 5, 0, 2 * 3.14);
+	pincel.fill();
+	
+    pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(272, 338, 2, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(332, 338, 2, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+    pincel.moveTo(300, 80);
+    pincel.lineTo(210, 300);
+    pincel.lineTo(390, 300);
+	pincel.fill();
+	
+	pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 60, 30, 0, 2 * 3.14);
+    pincel.fill();
+	
+	pincel.fillStyle = 'beige';
+    pincel.beginPath();
+    pincel.arc(300, 410, 20, 0, 2 * 3.14);
+    pincel.fill();
+
+	
+	
+	function desenhaCirculoLaranja(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function circuloLaranja(x, y) {
+
+        desenhaCirculoLaranja(x, y, 20, 'orange');
+        desenhaCirculoLaranja(x+30, y, 20, 'orange');
+        desenhaCirculoLaranja(x+60, y, 20, 'orange');
+        desenhaCirculoLaranja(x+90, y, 20, 'orange');
+        desenhaCirculoLaranja(x+120, y, 20, 'orange');
+        desenhaCirculoLaranja(x+150, y, 20, 'orange');
+        desenhaCirculoLaranja(x-10, y+25, 15, 'orange');
+        desenhaCirculoLaranja(x+165, y+20, 15, 'orange');
+	}
+
+    circuloLaranja(220, 300);
+	
+	
+	
+	function desenhaNariz(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function narizDoPalhaço(x, y) {
+
+        desenhaNariz(x, y, 30, 'beige');
+        desenhaNariz(x+10, y, 30, 'beige');
+        desenhaNariz(x+20, y, 30, 'beige');
+        desenhaNariz(x+30, y, 30, 'beige');
+        desenhaNariz(x+40, y, 30, 'beige');
+	}
+
+    narizDoPalhaço(280, 380);
+	
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.arc(300, 410, 10, 0, 1 * 3.14);
+	pincel.fill();
+
+	pincel.fillStyle = 'red';
+    pincel.beginPath();
+    pincel.arc(300, 380, 20, 0, 2 * 3.14);
+    pincel.fill();
+	
+	pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(310, 380, 2, 0, 2 * 3.14);
+	pincel.fill();
+	
+	pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(305, 382, 3, 0, 2 * 3.14);
+	pincel.fill();
+	
+	
+	
+	function desenhaQuadradoVerde(x, y) {
+    
+	    pincel.fillStyle = 'lightgreen';
+        pincel.fillRect(x, y, 50, 50);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(x, y, 50, 50);
+}
+
+    desenhaQuadradoVerde(0, 0);
+    desenhaQuadradoVerde(50, 0);
+    desenhaQuadradoVerde(0, 50);
+    desenhaQuadradoVerde(0, 100);
+    desenhaQuadradoVerde(50, 100);
+    desenhaQuadradoVerde(0, 150);
+    desenhaQuadradoVerde(0, 200);
+    desenhaQuadradoVerde(50, 200);
+    desenhaQuadradoVerde(0, 250);
+	desenhaQuadradoVerde(0, 300);
+    desenhaQuadradoVerde(50, 300);
+    desenhaQuadradoVerde(0, 350);
+    desenhaQuadradoVerde(0, 400);
+    desenhaQuadradoVerde(50, 400);
+    desenhaQuadradoVerde(0, 450);
+    desenhaQuadradoVerde(0, 500);
+    desenhaQuadradoVerde(50, 500);
+    desenhaQuadradoVerde(0, 550);
+    desenhaQuadradoVerde(0, 600);
+    desenhaQuadradoVerde(50, 600);
+	desenhaQuadradoVerde(550, 0);
+    desenhaQuadradoVerde(500, 0);
+    desenhaQuadradoVerde(550, 50);
+    desenhaQuadradoVerde(550, 100);
+    desenhaQuadradoVerde(500, 100);
+    desenhaQuadradoVerde(550, 150);
+    desenhaQuadradoVerde(550, 200);
+    desenhaQuadradoVerde(500, 200);
+    desenhaQuadradoVerde(550, 250);
+    desenhaQuadradoVerde(550, 300);
+    desenhaQuadradoVerde(500, 300);
+    desenhaQuadradoVerde(550, 350);
+    desenhaQuadradoVerde(550, 400);
+    desenhaQuadradoVerde(500, 400);
+    desenhaQuadradoVerde(550, 450);
+    desenhaQuadradoVerde(550, 500);
+    desenhaQuadradoVerde(500, 500);
+    desenhaQuadradoVerde(550, 550);
+    desenhaQuadradoVerde(550, 600);
+    desenhaQuadradoVerde(500, 600);
+	
+</script>
