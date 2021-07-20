@@ -1,0 +1,53 @@
+body{
+   background:orange;
+
+}
+
+
+
+#logo{
+	padding-left: 680px;
+
+	width: 29%;
+}
+#fd {
+
+	width: 10%;
+	align: center;
+}
+#bn{
+	width: 10%;
+	padding-left: 1700px
+}
+
+h1{
+	text-align: center;
+}
+
+
+p {  
+	text-align: center  ; 
+	color: brack ;
+	font-size: 20px;
+	
+	}
+
+ul {
+	font-size:50px;
+	background:brown;
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+
+
+
+}
+
+#lema{
+
+	font-size:50px;
+	text-align: center
+	color: red;
+
+
+
